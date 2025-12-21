@@ -4,12 +4,12 @@ import { useState } from 'react';
 
 const Navbar = () => {
   const options = ['Home', 'Projects', 'About'];
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
 
   const displayMenuItems = () => {
     return options.map((opt) => (
       <div
-        onClick={() => setOpen(false)}
+        onClick={() => setOpen((prev) => !prev)}
         key={opt}
         className="hover:cursor-pointer hover:scale-125 "
       >
@@ -22,13 +22,13 @@ const Navbar = () => {
       <div className="flex justify-between items-center md:justify-around">
         {/* Mobile nav view */}
         <div className="md:hidden">
-          {open === false ? (
-            <div className="p-1" onClick={() => setOpen(!open)}>
+          {!open ? (
+            <div className="p-1" onClick={() => setOpen((prev) => !prev)}>
               <Menu size={40} />
             </div>
           ) : (
             <div className="w-screen h-screen inset-0 z-50 bg-black/80 ">
-              <div onClick={() => setOpen(!open)} className="w-fit">
+              <div onClick={() => setOpen((prev) => !prev)} className="w-fit">
                 <X size={50} />
               </div>
               <div>
