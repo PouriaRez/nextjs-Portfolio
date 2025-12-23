@@ -9,7 +9,7 @@ const Navbar = () => {
   const displayMenuItems = () => {
     return options.map((opt) => (
       <div
-        onClick={() => setOpen((prev) => !prev)}
+        onClick={() => setOpen(false)}
         key={opt}
         className="hover:cursor-pointer hover:scale-125 "
       >
