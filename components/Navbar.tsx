@@ -20,7 +20,7 @@ const Navbar = () => {
     ));
   };
   return (
-    <div className="pt-8 pb-8">
+    <div className="pt-8">
       <div className="flex justify-between items-center md:justify-around">
         {/* Mobile nav view */}
         <div className="md:hidden">
@@ -44,7 +44,7 @@ const Navbar = () => {
 
         {!open && (
           <div>
-            <p className="text-4xl hover:cursor-pointer">
+            <p className="text-4xl hover:cursor-pointer font-bold">
               Pouria{' '}
               <span className="bg-linear-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                 Rezaei
