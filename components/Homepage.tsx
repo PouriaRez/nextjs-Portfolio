@@ -1,13 +1,11 @@
 import Image from 'next/image';
-import TechStack from './TechStack';
-
 const Homepage = () => {
   return (
     <div
       id="home"
-      className="flex flex-col justify-around items-center h-screen md:flex-row-reverse "
+      className="flex flex-col justify-around items-center h-screen md:flex-row-reverse"
     >
-      <div>
+      <div className="hover:-translate-y-2.5 transition duration-200">
         <Image
           src="/self.jpg"
           alt="Pouria Rezaei"
@@ -20,16 +18,16 @@ const Homepage = () => {
       <div>
         <div>
           {/* maybe remove linear gradient */}
-          <div className="text-7xl flex justify-center items-center md:justify-start md:text-9xl bg-linear-to-r from-[#1D84B5] rounded-2xl">
+          <div className="text-9xl flex justify-center items-center md:justify-start md:text-[12rem]">
             Pouria
           </div>
-          <div className="text-6xl md:text-7xl italic">
+          <div className="text-6xl  md:text-8xl italic">
             Fullstack Developer.
           </div>
         </div>
         <div>
-          tech stack here.
-          {/* <TechStack /> */}
+          Click this button will change above ^^ to another hobby or fact about
+          me!
         </div>
       </div>
     </div>
