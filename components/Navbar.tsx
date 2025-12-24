@@ -11,14 +11,16 @@ const Navbar = () => {
       <div
         onClick={() => setOpen(false)}
         key={opt}
-        className="hover:cursor-pointer hover:scale-125 "
+        className="hover:cursor-pointer hover:scale-110 transition duration-200 "
       >
-        <p className="text-3xl">{opt}</p>
+        <p className="text-3xl">
+          <a href={`#${opt.toLowerCase()}`}>{opt}</a>
+        </p>
       </div>
     ));
   };
   return (
-    <>
+    <div className="pt-8 pb-8">
       <div className="flex justify-between items-center md:justify-around">
         {/* Mobile nav view */}
         <div className="md:hidden">
@@ -44,7 +46,7 @@ const Navbar = () => {
           <div>
             <p className="text-4xl hover:cursor-pointer">
               Pouria{' '}
-              <span className="bg-linear-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                 Rezaei
               </span>
             </p>
@@ -57,7 +59,7 @@ const Navbar = () => {
         {/* Desktop nav view */}
         <div className="hidden gap-12 md:flex">{displayMenuItems()}</div>
       </div>
-    </>
+    </div>
   );
 };
 
