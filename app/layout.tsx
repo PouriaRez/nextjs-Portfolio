@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Pouria Rezaei',
   description: 'Pouria Rezaei, Fullstack developer portfolio',
+  icons: {
+    icon: '/icons/PR_logo.png',
+  },
 };
 
 export default function RootLayout({
