@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { FileUser, Github, Linkedin } from 'lucide-react';
 const Homepage = () => {
   return (
     <div
@@ -25,9 +26,37 @@ const Homepage = () => {
             Fullstack Developer.
           </div>
         </div>
-        <div>
-          Click this button will change above ^^ to another hobby or fact about
-          me!
+        <div className="flex gap-8">
+          <a
+            className="flex flex-col justify-center
+                      hover:scale-110 transition duration-200"
+            href="/resume/December_2025_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FileUser size={50} strokeWidth={1} />
+            <p className="text-4xl font-bold">Resume</p>
+          </a>
+          <a
+            className="flex flex-col justify-center
+                      hover:scale-110 transition duration-200"
+            href="https://github.com/PouriaRez"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Github size={50} strokeWidth={1} />
+            <p className="text-4xl font-bold">Github</p>
+          </a>
+          <a
+            className="flex flex-col justify-center
+                      hover:scale-110 transition duration-200"
+            href="https://www.linkedin.com/in/pouriarez/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Linkedin size={50} strokeWidth={1} />
+            <p className="text-4xl font-bold">LinkedIn</p>
+          </a>
         </div>
       </div>
     </div>

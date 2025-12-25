@@ -1,8 +1,8 @@
 export type projectCardInfo = {
   title: string;
-  img: string;
+  img?: string;
   motto?: string;
   description: string;
-  github: string;
+  github?: string;
   website?: string;
 };
