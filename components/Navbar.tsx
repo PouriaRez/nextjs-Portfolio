@@ -9,14 +9,17 @@ const Navbar = () => {
 
   useEffect(() => {
     gsap.to(nameDivRef.current, {
-      keyframes: {
-        x: [-25, 150, -25],
-      },
+      keyframes: [
+        { x: 150, y: 0 },
+        { x: 150, y: -30 },
+        { x: -20, y: -30 },
+        { x: -20, y: 0 },
+      ],
       duration: 2,
       ease: 'none',
       repeat: -1,
     });
-  });
+  }, []);
 
   const displayMenuItems = () => {
     return options.map((opt) => (
@@ -65,7 +68,7 @@ const Navbar = () => {
               </p>
               <div
                 ref={nameDivRef}
-                className="absolute w-2 h-1 bg-cyan-400 rounded-full top-10 md:top-20"
+                className="absolute w-2 h-1 bg-cyan-400 rounded-full top-10 md:top-19"
               ></div>
             </div>
           </a>

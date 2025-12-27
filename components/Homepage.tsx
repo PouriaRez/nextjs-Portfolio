@@ -26,7 +26,7 @@ const Homepage = () => {
             Fullstack Developer.
           </div>
         </div>
-        <div className="flex gap-8">
+        <div className="flex gap-8 mt-2">
           <a
             className="flex flex-col justify-center
                       hover:scale-110 transition duration-200"

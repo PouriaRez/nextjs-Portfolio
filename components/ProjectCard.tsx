@@ -57,7 +57,9 @@ const ProjectCard = ({
           <div className="text-7xl font-semibold md:text-9xl">{title}</div>
           {img && <Image src={img} alt={img} height={100} width={100} />}
         </div>
-        <div className="text-3xl italic md:text-5xl m-2">{motto}</div>
+        <div className="text-3xl italic md:text-5xl m-2 text-center">
+          {motto}
+        </div>
         <div className="flex justify-start items-center gap-2">
           {github && (
             <div className="hover:shadow-[0_0_20px_#00FFFF] hover:scale-120 rounded-3xl transition-all duration-200">

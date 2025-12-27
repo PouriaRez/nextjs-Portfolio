@@ -43,6 +43,7 @@ const Projects = () => {
       github: 'https://github.com/PouriaRez/Task-Mangement',
     },
   ];
+
   return (
     <div id="projects" className="h-fit group">
       {projectsList.map((p) => (
