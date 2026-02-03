@@ -1,23 +1,27 @@
-import { technologyCardInfo } from '@/types/technologies';
+import { TechnologyCardInfo } from '@/types/technologies';
 import Image from 'next/image';
 
-const TechnologyCard = ({ title }: technologyCardInfo) => {
+const TechnologyCard = ({ title, technologies }: TechnologyCardInfo) => {
   return (
     <>
       <div
-        className="flex flex-col items-center border w-screen ml-2 mr-2 p-5 
+        className="flex flex-col items-center border ml-2 mr-2 p-5 
       md:w-1/2 "
       >
         <div className="text-5xl ">{title}</div>
         <div className="flex justify-between items-center">
           <div className="flex flex-col justify-center items-center">
-            <Image
-              src="/icons/javascript.svg"
-              alt="js"
-              height={50}
-              width={50}
-            />
-            <p>Javascript</p>
+            {technologies.map((tech) => (
+              <>
+                <Image
+                  src={`/icons/${tech}.svg`}
+                  alt={`${tech}`}
+                  height={50}
+                  width={50}
+                />
+                <p>{tech}</p>
+              </>
+            ))}
           </div>
         </div>
       </div>

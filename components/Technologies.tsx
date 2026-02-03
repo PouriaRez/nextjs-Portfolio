@@ -1,18 +1,29 @@
 import TechnologyCard from './TechnologyCard';
 
 const Technologies = () => {
+  const technologies = [
+    { title: 'Frontend', tech: ['React', 'React Native', 'Angular'] },
+    {
+      title: 'Backend',
+      tech: [
+        'Node.js',
+        'Express',
+        'PostgreSQL',
+        'Firebase',
+        'OpenAPI',
+        'Plaid API',
+      ],
+    },
+  ];
   return (
-    <div
-      id="technologies"
-      className="flex justify-center items-center h-screen w-screen"
-    >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center mt-5">
-        <TechnologyCard title="Languages" />
-        <TechnologyCard title="Frontend" />
-        <TechnologyCard title="Backend" />
-        <TechnologyCard title="Developer Tools & Testing" />
-        <TechnologyCard title="Cloud & Deployment" />
-      </div>
+    <div id="technologies">
+      {technologies.map((technology) => (
+        <TechnologyCard
+          key={technology.title}
+          title={technology.title}
+          technologies={technology.tech}
+        />
+      ))}
     </div>
   );
 };
