@@ -3,8 +3,9 @@ import Image from 'next/image';
 import { projectCardInfo } from '@/types/project';
 import { Github, Link } from 'lucide-react';
 import gsap from 'gsap';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { ScrollTrigger } from 'gsap/all';
+import { useGSAP } from '@gsap/react';
 const ProjectCard = ({
   title,
   img,
@@ -15,8 +16,9 @@ const ProjectCard = ({
 }: projectCardInfo) => {
   const cardRef = useRef<HTMLDivElement>(null);
   gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(useGSAP);
 
-  useEffect(() => {
+  useGSAP(() => {
     if (!cardRef.current) return;
 
     gsap.fromTo(
@@ -40,7 +42,7 @@ const ProjectCard = ({
         },
       },
     );
-  }, []);
+  });
   return (
     <div
       ref={cardRef}
