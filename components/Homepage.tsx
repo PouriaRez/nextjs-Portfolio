@@ -30,7 +30,7 @@ const Homepage = () => {
           <a
             className="flex flex-col justify-center
                       hover:scale-110 transition duration-200"
-            href="/resume/December_2025_Resume.pdf"
+            href="/resume/Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >

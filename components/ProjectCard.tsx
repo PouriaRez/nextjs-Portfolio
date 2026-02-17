@@ -38,7 +38,7 @@ const ProjectCard = ({
 
           toggleActions: 'play',
         },
-      }
+      },
     );
   }, []);
   return (
@@ -46,7 +46,7 @@ const ProjectCard = ({
       ref={cardRef}
       className="flex justify-center items-center flex-col p-10 
                       md:flex-row md:justify-around
-                      hover:shadow-[0_0_20px_#00FFFF]
+                      hover:shadow-[0_0_10px_#C0C0C0]
                       transition-all duration-500"
     >
       <div
@@ -62,7 +62,7 @@ const ProjectCard = ({
         </div>
         <div className="flex justify-start items-center gap-2">
           {github && (
-            <div className="hover:shadow-[0_0_20px_#00FFFF] hover:scale-120 rounded-3xl transition-all duration-200">
+            <div className="hover:scale-120 rounded-3xl transition-all duration-200">
               <a
                 className="text-2xl "
                 href={github}
@@ -74,7 +74,7 @@ const ProjectCard = ({
             </div>
           )}
           {website && (
-            <div className="hover:shadow-[0_0_20px_#00FFFF] hover:scale-120 rounded-3xl transition-all duration-200">
+            <div className="hover:scale-120 rounded-3xl transition-all duration-200">
               <a
                 className="text-2xl"
                 href={website}
