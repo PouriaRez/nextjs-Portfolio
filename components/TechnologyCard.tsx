@@ -12,7 +12,7 @@ const TechnologyCard = ({ title, technologies }: TechnologyCardInfo) => {
         <div className="flex justify-between items-center">
           <div className="flex flex-col justify-center items-center">
             {technologies.map((tech) => (
-              <>
+              <div key={tech}>
                 <Image
                   src={`/icons/${tech}.svg`}
                   alt={`${tech}`}
@@ -20,7 +20,7 @@ const TechnologyCard = ({ title, technologies }: TechnologyCardInfo) => {
                   width={50}
                 />
                 <p>{tech}</p>
-              </>
+              </div>
             ))}
           </div>
         </div>
