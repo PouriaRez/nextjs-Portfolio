@@ -6,9 +6,12 @@ import Image from 'next/image';
 const TechnologyCard = ({ title, technologies }: TechnologyCardInfo) => {
   return (
     <>
-      <div className="w-full flex flex-col items-center border p-5 ">
+      <div className="w-full md:w-1/3 flex flex-col items-center border p-5 ">
         <div className="text-5xl m-2 text-center ">{title}</div>
-        <div className="flex justify-center items-center flex-wrap gap-15">
+        <div
+          className="grid grid-cols-3 gap-15
+                    md:flex md:justify-center md:items-center md:flex-wrap"
+        >
           {technologies.map((tech) => (
             <div
               key={tech}
@@ -22,7 +25,7 @@ const TechnologyCard = ({ title, technologies }: TechnologyCardInfo) => {
                   width={50}
                 />
               </div>
-              <p className="text-center">{tech}</p>
+              <p className="text-center font-bold text-2xl">{tech}</p>
             </div>
           ))}
         </div>
