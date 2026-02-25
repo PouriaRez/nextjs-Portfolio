@@ -46,7 +46,7 @@ const ProjectCard = ({
   return (
     <div
       ref={cardRef}
-      className="flex justify-center items-center flex-col p-10 
+      className="flex justify-center items-center flex-col p-10
                       md:flex-row md:justify-around
                       hover:shadow-[0_0_10px_#C0C0C0]
                       transition-all duration-500"

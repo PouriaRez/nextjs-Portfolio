@@ -39,7 +39,7 @@ const Technologies = () => {
   return (
     <div
       id="technologies"
-      className="flex flex-col justify-center items-center gap-2 m-1
+      className="flex flex-col justify-center items-center gap-2 m-5
                   md:flex-row md:flex-wrap"
     >
       {technologies.map((technology) => (
