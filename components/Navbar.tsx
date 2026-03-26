@@ -3,7 +3,8 @@ import { Menu, X } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 const Navbar = () => {
-  const options = ['Home', 'Projects', 'Technologies', 'About'];
+  // const options = ['Home', 'Projects', 'Technologies', 'About'];
+  const options = ['Home', 'Projects', 'Technologies'];
   const [open, setOpen] = useState<boolean>(false);
   const nameDivRef = useRef<HTMLDivElement>(null);
 
@@ -47,7 +48,7 @@ const Navbar = () => {
               <Menu size={40} strokeWidth={0.5} />
             </div>
           ) : (
-            <div className="w-screen h-screen inset-0 z-50 bg-black/80 ">
+            <div className="w-screen h-dvh inset-0 z-50 bg-black/80 ">
               <div onClick={() => setOpen((prev) => !prev)} className="w-fit">
                 <X size={40} strokeWidth={0.5} />
               </div>

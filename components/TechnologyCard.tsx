@@ -19,7 +19,7 @@ const TechnologyCard = ({ title, technologies }: TechnologyCardInfo) => {
       {
         opacity: 0,
 
-        x: window.innerWidth,
+        x: -window.innerWidth,
       },
       {
         opacity: 1,
@@ -41,7 +41,7 @@ const TechnologyCard = ({ title, technologies }: TechnologyCardInfo) => {
     <>
       <div
         ref={cardRef}
-        className="w-full min-h-100 md:w-1/3 flex flex-col items-center border p-5 
+        className="w-full min-h-120 md:w-1/3 flex flex-col items-center border p-5 
         hover:shadow-[0_0_10px_#C0C0C0] transition-all duration-500"
       >
         <div className="text-5xl m-2 text-center ">{title}</div>
